@@ -1,0 +1,57 @@
+@(levelText : String, levelId: String)
+@main("Game") {
+	<meta charset="utf-8">
+    <style>
+      #gameContainer {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        background: black;
+        padding: 20px;
+        margin: 10px;
+        line-height: 1.3em;
+        border: 2px dashed #FFCC00;
+        border-radius: 10px;
+        box-shadow: 0 0 0 4px black, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+      }
+    </style>
+
+    <script src="@routes.Assets.versioned("javascripts/Game_globals.js")"></script>
+    
+    <script src="@routes.Assets.versioned("javascripts/phaser.min.js")"></script>
+    <script src="@routes.Assets.versioned("javascripts/slick-ui.min.js")"></script>
+    
+    <script src="@routes.Assets.versioned("javascripts/Game_UI.js")"></script>
+    <script src="@routes.Assets.versioned("javascripts/Game_AUDIO.js")"></script>
+
+    <script src="@routes.Assets.versioned("javascripts/Game.js")"></script>
+
+    <script
+  		src="https://code.jquery.com/jquery-3.1.1.min.js"https://phaser.io/news/category/tutorial
+  		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  		crossorigin="anonymous"></script>
+
+    <body>
+
+    	<div id='gameContainer' align='center'></div>
+    	
+        <div style="display: none"  id="gametext">@levelText</div>
+        <div style="display: none"  id="lvlId">@levelId</div>
+
+        <script>
+            /* --------------------------------- */
+            /* Warning on unload during gameplay */
+            /* --------------------------------- */
+            window.addEventListener('beforeunload', function(e) {
+                if (game.state.current === STATE_PLAY) {
+                    let msg_confirmLeave = '~+- WARNING -+~\nYour progress will be lost upon leaving this site.';
+                    (e || window.event).returnValue = msg_confirmLeave;
+                    return msg_confirmLeave;
+                }
+            });
+        </script>
+
+    </body>
+}

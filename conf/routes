@@ -1,0 +1,44 @@
+# Routes
+# This file defines all application routes
+# ~~~~
+# Map static resources from the /public folder to the /assets URL path (js routing)
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+# Login & Account creation
+GET     /                           controllers.UserController.renderLoginPage
+GET     /login                      controllers.UserController.renderLoginPage
+POST    /login                      controllers.UserController.authenticate
+GET     /logout                     controllers.UserController.logout
+
+GET     /createAccount              controllers.UserController.renderCreateAccountPage
+POST    /createAccount              controllers.UserController.saveAccountToDatabase
+
+
+# Main menu
+GET     /setupMenu                  controllers.SetupController.renderSetupMenu
+GET     /levelList                  controllers.SetupController.levelList
+GET     /top3Scores                 controllers.SetupController.sendTop3Scores
+
+
+# Game
+GET		/runGame					controllers.GameController.renderGamePage
+POST    /gametext                   controllers.GameController.gameText
+POST    /sendScore                  controllers.GameController.sendScoreToDB
+
+
+# Friends & messages
+GET     /friends                    controllers.FriendController.RenderFriendsPage
+POST    /friends                    controllers.FriendController.addFriendsToDatabase
+GET     /friendslist                controllers.FriendController.friendsList
+POST    /getReceiverId              controllers.FriendController.getReceiverId
+POST    /saveMessageToDatabase      controllers.FriendController.saveMessageToDatabase
+GET     /messageHistory             controllers.FriendController.messageHistory
+GET     /profileInfo                controllers.FriendController.profileInfo
+
+
+# Profile
+GET     /profile                    controllers.UserController.renderProfilePage
+GET     /achievement                controllers.AchievementController.isAchievementUnlocked
+
+# Credits
+GET     /credits                    controllers.GameController.renderCreditsPage

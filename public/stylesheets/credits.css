@@ -1,0 +1,43 @@
+div{
+    background-color: #999999;
+    font-family: 'minecraft', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 80%;
+    height: 700px;
+    overflow-y: scroll;
+
+    margin: 0 auto;
+}
+
+div a{
+    text-decoration: none;
+}
+
+div a:hover{
+    color: #cccccc;
+}
+
+h6{
+    font-family: 'minecraft', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 20px;
+}

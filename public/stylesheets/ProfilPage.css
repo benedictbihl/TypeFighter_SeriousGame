@@ -1,0 +1,99 @@
+body {
+    font-family: 'minecraft', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 0;
+    padding-top: 70px;
+    margin: 0;
+
+}
+a { text-decoration: none; }
+h1 { font-size: 1em; }
+h1, p {
+    margin-bottom: 10px;
+}
+strong {
+    font-weight: bold;
+}
+.uppercase { text-transform: uppercase; }
+
+/* ---------- PROFIL ---------- */
+
+h1{
+    text-align: center;
+    font-size: 2em;
+}
+
+#contentbox{
+
+    margin-left: 20%;
+    margin-right: 15%;
+    position: absolute;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+#background{
+    background-color: #999999;
+    width: 100%;
+    padding: 10px;
+}
+
+#avatar{
+    width: 25%;
+    padding: 10px;
+}
+
+#avatarImage{
+    width: 80%;
+    vertical-align: middle;
+    padding-left: 13px;
+
+}
+
+#trophies{
+    width: 163px;
+    height: 163px;
+}
+
+#accountData{
+    width: 67%;
+    float: left;
+    padding: 10px;
+}
+
+#achievements{
+    width: 96%;
+    padding: 10px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltiptext{
+    visibility: hidden;
+}
+
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+}
+
+.box{
+    float: left;
+    background-color: #cccccc;
+    margin: 1em;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+.box.achievements{
+    align: left;
+    height: 163px;
+    width: 163px;
+}
+

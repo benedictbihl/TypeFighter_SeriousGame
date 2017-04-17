@@ -1,0 +1,119 @@
+.square {
+    display: inline-block;
+    position: relative;
+    width: 600px;
+    padding-bottom : 400px; /* = width for a 1:1 aspect ratio */
+    margin:10px;
+    background-color:#999999;
+    overflow:hidden;
+    border-radius: 12px;
+    cursor: hand;
+}
+
+
+.content {
+    position:absolute;
+    height:100%; /* = 100% - 2*5% padding */
+    width:100%; /* = 100% - 2*5% padding */
+    font-size: 100%;
+}
+.table{
+    display:table;
+    width:100%;
+    height:100%;
+}
+.table-cell{
+    display:table-cell;
+
+}
+option:hover{
+
+    background-color: #cccccc;
+}
+
+
+#playBtn {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    font-size: 400%;
+    font-family: 'minecraft', verdana, sans-serif;
+   background-color: #cccccc ;
+}
+
+#playBtn:hover {
+    background-color: #FFCC00;
+    transition: all 0.3s ease;
+}
+
+#highscoreList {
+    font-size: 150%;
+    text-align: center;
+}
+
+#lvlList {
+    height:250px; width:95%;
+    overflow:hidden; overflow-y:scroll;
+    font-family: 'minecraft', Arial, Helvetica, sans-serif;
+    background-color: inherit;
+    font-size: 150%;
+    border: 2px solid black;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 20px;
+}
+
+.headline {
+    font-size: 200%;
+    text-align: center;
+}
+
+#selectedLevelText{
+    display: inline-block;
+    width: 95%;
+    text-align: center;
+    overflow-y: scroll;
+    height: 250px;
+    border: 2px solid black;
+}
+
+ol{
+    display: inline-block;
+    width: 95%;
+
+    padding:0;
+    list-style-position:inside;
+    font-size: 150%;
+    text-align: center;
+    border: 2px solid black;
+}
+li{
+
+    padding:6px;
+
+}
+
+
+body {
+    font-size:20px;
+    font-family: 'minecraft',verdana, sans-serif;
+    color: black;
+    text-align:center;
+
+}
+p{
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+

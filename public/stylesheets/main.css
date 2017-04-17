@@ -1,0 +1,123 @@
+@font-face { font-family: 'typewriter';
+    src: url("../font/typewriter.ttf") format('truetype'); }
+
+@font-face { font-family: 'minecraft';
+    src: url("../font/Minecraftia-Regular.ttf") format('truetype'); }
+
+nav {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #999999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 500;
+    height: 65px;
+    border-bottom: 2px solid #bbb;
+    border-top: 2px solid #bbb;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+ul {
+    vertical-align: 15px;
+}
+nav li {
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'minecraft', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.left {
+
+    text-align: center;
+    padding: 0;
+}
+.right {
+
+    text-align: center;
+    padding: 0;
+}
+
+a img{
+    height: 60px;
+    width:300px;
+    margin: 0;
+
+
+}
+
+a img:hover{
+    background-color: #cccccc;
+    transition: all 0.3s ease;
+
+}
+
+
+.links {
+
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: black;
+    font-size: 18px;
+    border-left: 2px solid #bbb;
+    border-right: 2px solid #bbb;
+}
+
+#logout:hover{
+    background-color: indianred;
+}
+.navbarEntr a:hover {
+    background-color: #cccccc;
+    transition: all 0.3s ease;
+}
+
+.active{
+    background-color: #FFCC00;
+
+}
+.errorMsg{
+    background-color: red;
+    font-size: 20px;
+    height: 60px;
+    font-style: oblique;
+    text-align: center;
+    border-radius: 3px;
+    vertical-align: text-bottom;
+    margin-bottom: 8px;
+}
+
+.successMsg{
+    background-color: green;
+    font-size: 20px;
+    height: 60px;
+    font-style: oblique;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    margin-top: 5px;
+}
+
+
+body {
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    padding: 0;
+    padding-top: 90px;
+    margin: 0;
+
+}
+
+
+

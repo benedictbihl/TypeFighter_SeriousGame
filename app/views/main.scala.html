@@ -1,0 +1,36 @@
+@*
+* This template is called from the `index` template. This template
+* handles the rendering of the page header and body tags. It takes
+* two arguments, a `String` for the title of the page and an `Html`
+* object to insert into the body of the page.
+*@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @* Here's where we render the page title `String`. *@
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jBox/0.4.7/jBox.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="@routes.Assets.versioned("javascripts/main.js")" type="text/javascript"></script>
+    </head>
+    <body>
+        <nav>
+            <ul class="nav left">
+                <li class="navbarEntr"><a class="links" href="/friends">Friends</a></li>
+                <li class="navbarEntr"><a class="links" href="/profile">Profile</a></li>
+            </ul>
+
+            <a href="/setupMenu"><img id="navLogo" src="@routes.Assets.versioned("images/Typefighter.png")"></a>
+
+            <ul class="nav right">
+                <li class="navbarEntr"><a class="links" href="/credits">Credits</a></li>
+                <li class="navbarEntr"><a id="logout" class="links" href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+        @content
+    </body>
+</html>

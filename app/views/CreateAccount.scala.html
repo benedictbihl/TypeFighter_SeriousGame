@@ -1,0 +1,32 @@
+
+@(loginForm: Form[services.LoginForm], nameTaken: Boolean, userCreated: Boolean, formEmpty: Boolean)
+
+@import helper._
+
+@loginTemplate("Create Account") {
+    <body>
+        <a href="/login"> <button type="button" class="btn btn-default btn-arrow-left">.Login</button></a>
+        <div id="login">
+            <h1> Enter a username and password:</h1>
+            @form(action = routes.UserController.saveAccountToDatabase()){
+                <p><input  type="text" placeholder="Username" name="@loginForm("userName").name" id ="@loginForm("userName").id" value="@loginForm("userName").value"></p>
+                <p><input  type="password" placeholder="Password" name="@loginForm("password").name" id ="@loginForm("password").id"  value="@loginForm("password").value"></p>
+
+                @if(nameTaken){
+                    <div class="errorMsg"><br>Username is unavailable!</div>
+                }
+                @if(formEmpty) {
+                    <div class="errorMsg"><br>Please fill out both forms!</div>
+                }
+                @if(userCreated){
+                    <div class="successMsg"><a style="text-decoration: none;color: black" href="/login">Account created!<br> Click to go back to Loginpage</a></div>
+                }
+                <p><input type="submit" value="Create Account";></p>
+
+            }
+        </div>
+
+    </body>
+}
+
+

@@ -1,0 +1,30 @@
+
+@(loginForm: Form[services.LoginForm], userExists: Boolean, formEmpty: Boolean)
+
+@import helper._
+
+@loginTemplate("Login") {
+    <body>
+        <div id="login">
+            <h1>Please log in:</h1>
+            @form(action = routes.UserController.authenticate()){
+
+                <p><input  type="text" placeholder="Username" name="@loginForm("userName").name" id ="@loginForm("userName").id" value="@loginForm("userName").value"></p>
+                <p><input  type="password" placeholder="Password" name="@loginForm("password").name" id ="@loginForm("password").id"  value="@loginForm("password").value"></p>
+                @if(userExists == false) {
+                    <div class="errorMsg"><br>Login credentials invalid!</div>
+                }
+                @if(formEmpty) {
+                    <div class="errorMsg"><br>Please fill out both forms!</div>
+                }
+                <p><input type="submit" value="Login";></p>
+                <br>
+                <p><a href="/createAccount"> <button type="button" id="createAcc" >Create a new Account</button></a></p>
+
+            }
+        </div>
+
+    </body>
+}
+
+

@@ -1,0 +1,249 @@
+@font-face { font-family: 'typewriter';
+    src: url("../font/typewriter.ttf") format('truetype'); }
+
+body {
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #5a5656;
+    font-family: 'minecraft', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.test{
+    color: black;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+
+.chat_window {
+    position: absolute;
+    width: calc(100% - 5px);
+    max-width: 60%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: #999999;
+    left: 50%;
+    top: 53%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.top_menu {
+    display: table;
+    background-color: #444;
+    width: 100%;
+    padding: 10px 0 10px;
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    height: 10%;
+}
+
+.top_menu .title {
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    display: table-cell;
+
+}
+
+.sender{
+    font-weight: bold;
+    color: #DE990F;
+    background-color: #D1D1D1;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-bottom:2px;
+    padding: 4px;
+}
+
+.receiver{
+    font-weight: bold;
+    font-style: oblique;
+    color: #FF6600;
+    background-color: #C2C2C2;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-bottom: 2px;
+    padding: 4px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 20px;
+}
+
+.message_template {
+    display: none;
+}
+
+#history{
+    list-style: none;
+    color: black;
+    overflow-y: scroll;
+    height: 67%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.bottom_wrapper {
+    position: absolute;
+    width: 100%;
+    background-color: #444;
+    padding: 10px 10px;
+    bottom: 0;
+    
+}
+
+.message_input_field{
+    width: 80%;
+    height:8%;
+    padding: 12px 20px;
+    margin-left: 10%;
+    margin-right:10%;
+    font-family: 'typewriter', Arial, Helvetica, sans-serif;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: #cccccc;
+}
+
+.text{
+    background-color: #999999;
+    border: 1px solid black;
+    border-radius: 3px;
+    color: black;
+    cursor: pointer;
+    font-family: 'minecraft', Arial, Helvetica, sans-serif;
+    height: 6%;
+    text-transform: uppercase;
+    width: 20%;
+    -webkit-appearance:none;
+    margin-left:40%;
+    margin-right:40%;
+}
+
+.div_select {
+    width:180px;
+    overflow:hidden;
+    border:#333;
+}
+
+option {
+
+    color: black;
+    margin: 1px;
+}
+
+option:hover{
+    background-color: #cccccc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.friendStats{
+    display: table-cell;
+    text-align: center;
+    color: white;
+    background-color:#4E4E4E ;
+    width:300px;
+    font-size:10px;
+    height:10%;
+    border-radius: 3px;
+}
+.myStats{
+    display: table-cell;
+    text-align: center;
+    color: white;
+    background-color:#4E4E4E;
+    width: 300px;
+    font-size: 10px;
+    height:10%;
+    border-radius: 3px;
+}
+
+
+#friendslist{
+    float: left;
+    position:fixed;
+    top: 25%;
+    height: 70%;
+    border-radius: 0 10px 10px 0;
+    margin-left: 0;
+    width: 15%;
+    box-shadow: none;
+    background-color: #999999;
+    font-family: 'minecraft', Arial, Helvetica, sans-serif;;
+    border: 1px solid black;
+    padding:.75em 1em .5em 1em;
+}
+
+.add_friend_field{
+    width: 12%;
+    height:35px;
+    left: 15px;
+    font-family: 'typewriter', Arial, Helvetica, sans-serif;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: #cccccc ;
+    margin-left: 10px;
+}
+
+.errorMsg{
+    background-color: red;
+    font-size: 15px;
+    color: black;
+    height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    vertical-align: text-bottom;
+    margin-bottom: 8px;
+    margin-top: 5px;
+    width: 12%;
+    margin-left: 10px;
+}
+
+.successMsg{
+    background-color: green;
+    font-size: 15px;
+    height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    margin-top: 5px;
+    color: black;
+    width: 12%;
+    margin-left: 10px;
+}
+
+.add_friend_submit{
+    background-color: #999999;
+    border: 1px solid black;
+    border-radius: 3px;
+    color: black;
+    cursor: pointer;
+    font-family: 'minecraft', Arial, Helvetica, sans-serif;
+    height: 30px;
+    text-transform: uppercase;
+    width: 12%;
+    -webkit-appearance:none;
+    margin-left: 10px;
+}
+
+#messageSubmit:hover {
+    background-color: #FFCC00;
+}
+

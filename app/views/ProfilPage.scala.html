@@ -1,0 +1,54 @@
+@import models.db.User
+
+@(user: User)
+
+@main("Achievements") {
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/ProfilPage.css")">
+
+    <script src="@routes.Assets.versioned("javascripts/ProfilPage.js")" type="text/javascript"></script>
+    <body>
+
+        <div id="contentbox" class="box">
+            <div id="background" class="box">
+                <div id="avatar" class="box" align="left">
+                    <img id="avatarImage" src="@routes.Assets.versioned("/images/Thief-icon.png")">
+                </div>
+
+                <div id="accountData" class="box" align="left">
+                    <p>Name: @user.getName </p>
+                    <p>All-time-best: @user.getHighscorefromDBWithuserID </p>
+                    <p>Average Score: @user.getAverageScorefromDBWithuserID </p>
+                </div>
+
+                <div id="achievements" class="box" align="left">
+                    <p>Achievements:</p>
+                    <div id="firstAch" class="box achievements" class="tooltip" title="Total Score over 1000!">
+                        <img id="trophies" src="@routes.Assets.versioned("/Trophies/first_trophy.png")" class="box" class="tooltip">
+                    </div>
+                    <div id="secondAch" class="box achievements" class="tooltip" title="Total Score over 5000!">
+                        <img id="trophies" src="@routes.Assets.versioned("/Trophies/second_trophy.png")" class="box">
+                    </div>
+                    <div id="thirdAch" class="box achievements" class="tooltip" title="Total Score over 10000!">
+                        <img id="trophies" src="@routes.Assets.versioned("/Trophies/third_trophy.png")" class="box" >
+                    </div>
+                    <div id="fourthAch" class="box achievements" class="tooltip" title="Total Score over 50000!">
+                        <img id="trophies" src="@routes.Assets.versioned("/Trophies/fourth_trophy.png")" class="box">
+                    </div>
+                    <div id="fifthAch" class="box achievements" class="tooltip" title="Total Score over 100000!">
+                        <img id="trophies" src="@routes.Assets.versioned("/Trophies/fifth_trophy.png")" class="box">
+                    </div>
+                    <div id="sixthAch" class="box achievements" class="tooltip" title="More than 5 Games played!">
+                        <img id="trophies" src="@routes.Assets.versioned("/Trophies/sixth_trophy.png")" class="box">
+                    </div>
+                    <div id="seventhAch" class="box achievements" class="tooltip" title="More than 20 Games played!">
+                        <img id="trophies" src="@routes.Assets.versioned("/Trophies/seventh_trophy.png")" class="box">
+                    </div>
+                    <div id="eighthAch" class="box achievements" class="tooltip" title="Game with 0 errors!">
+                        <img id="trophies" src="@routes.Assets.versioned("/Trophies/eigth_trophy.png")" class="box">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+}

@@ -1,0 +1,162 @@
+@font-face { font-family: 'typewriter';
+    src: url("../font/typewriter.ttf") format('truetype'); }
+@font-face { font-family: 'minecraft';
+    src: url("../font/Minecraftia-Regular.ttf") format('truetype'); }
+
+body {
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #5a5656;
+    font-family: 'minecraft', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+
+}
+.btn-arrow-left{
+    position:absolute;
+    padding-left: 18px;
+    padding-right: 36px;
+    top:10px;
+    left:45px;
+    background-color: #999999  ;
+    border: 1px solid black;
+    border-radius: 3px;
+    color: black;
+    font-size: 19px;
+    height: 51px;
+
+}
+
+.btn-arrow-left:hover{
+    background-color: #FFCC00;
+    border: 1px solid black;
+}
+
+
+.btn-arrow-left:before { /* make two squares (before and after), looking similar to the button */
+    content:"";
+    position: absolute;
+    top: 6px; /* move it down because of rounded corners */
+    width: 35px; /* same as height */
+    height: 35px; /* button_outer_height / sqrt(2) */
+    background: inherit; /* use parent background */
+    border: inherit; /* use parent border */
+    border-left-color: transparent; /* hide left border */
+    border-bottom-color: transparent; /* hide bottom border */
+    border-radius: 0px 4px 0px 0px; /* round arrow corner, the shorthand property doesn't accept "inherit" so it is set to 4px */
+    -webkit-border-radius: 0px 4px 0px 0px;
+    -moz-border-radius: 0px 4px 0px 0px;
+}
+.btn-arrow-left:before{
+    transform: rotate(225deg); /* rotate left arrow squares 225 deg to point left */
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+}
+.btn-arrow-left:before { /* align the "before" square to the left */
+    left: -18px;
+}
+
+.btn-arrow-left:before { /* bring arrow pointers to front */
+    z-index: 1;
+}
+
+.errorMsg{
+    background-color: red;
+    font-size: 20px;
+    height: 60px;
+    font-style: oblique;
+    text-align: center;
+    border-radius: 3px;
+    vertical-align: text-bottom;
+    margin-bottom: 8px;
+}
+
+.successMsg{
+    background-color: green;
+    font-size: 20px;
+    height: 60px;
+    font-style: oblique;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    margin-top: 5px;
+}
+
+h1 { font-size: 130%;
+
+
+}
+h1, p {
+    margin-bottom: 10px;
+}
+
+.uppercase { text-transform: uppercase; }
+
+/* ---------- LOGIN ---------- */
+
+#login {
+    margin: 70px auto auto;
+    width: 400px;
+    color: black;
+    font-size: 20px;
+}
+img {
+    display: block;
+    margin: 90px auto auto;
+    width: 1210px;
+    height: 171px;
+}
+a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+#createAcc{
+    background-color: #999999  ;
+    border: 1px solid black;
+    border-radius: 3px;
+    color: black;
+    cursor: pointer;
+    font-family: 'minecraft', Arial, Helvetica, sans-serif;
+    height: 50px;
+    text-transform: uppercase;
+    width: 400px;
+    -webkit-appearance:none;
+    vertical-align: text-bottom;
+    float: right;
+}
+
+#createAcc:hover {
+    background-color: #FFCC00;
+    text-decoration: none;
+}
+input[type=text], [type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: auto;
+    font-family: 'typewriter', Arial, Helvetica, sans-serif;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: #cccccc ;
+}
+input[type=submit] {
+    background-color: #999999  ;
+    border: 1px solid black;
+    border-radius: 3px;
+    color: black;
+    cursor: pointer;
+    font-family: 'minecraft', Arial, Helvetica, sans-serif;
+    height: 50px;
+    text-transform: uppercase;
+    width: 400px;
+    -webkit-appearance:none;
+    vertical-align: text-bottom;
+}
+input[type=submit]:hover {
+    background-color: #FFCC00;
+}

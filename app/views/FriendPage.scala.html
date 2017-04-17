@@ -1,0 +1,60 @@
+@(addFriendsForm: Form[services.AddFriendsForm], userExists: Boolean, friendshipExists: Boolean, friendAdded: Boolean)
+
+@import helper._
+
+@main("Friends") {
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("stylesheets/FriendPage.css")">
+    <body>
+        <script src="@routes.Assets.versioned("javascripts/Friendslist.js")" type="text/javascript"></script>
+
+        <div id="test">
+            <div class="chat_window">
+                <div class="top_menu">
+                    <div class="friendStats"></div>
+                    <div class="title"></div>
+                    <div class="myStats"></div>
+                </div>
+                <ul id="history"></ul>
+                <option id="def" selected="selected"></option>
+                <div class="bottom_wrapper clearfix">
+                    <div id="messageForm">
+
+                        <input  class="message_input_field" type="text" name ="message" placeholder="Enter Message..." value="">
+                        <button class="text" id="messageSubmit">Send Message</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="profileInfo"></div>
+        <div id="div_select">
+            <select size="14" id="friendslist"></select>
+        </div>
+
+        <div id="addFriend">
+        @form(action = routes.FriendController.addFriendsToDatabase()){
+
+            <input  class="add_friend_field" type="text" placeholder="Enter Friendname" name="@addFriendsForm("addFriend").name"
+            id ="@addFriendsForm("addFriend").id" value="@addFriendsForm("addFriend").value">
+            @if(userExists == false) {
+                <div class="errorMsg">User does not exist!</div>
+            }else{
+                @if(friendAdded) {
+                    <div class="successMsg">You are friends now!</div>
+                }else{
+                    @if(friendshipExists) {
+                        <div class="errorMsg">You are already friends!</div>
+                    }else{
+                        <br>
+
+                    }
+                }
+
+            }
+            <input class="add_friend_submit" type="submit" value="Add Friend">
+
+        </div>
+
+    </body>
+}}
+
