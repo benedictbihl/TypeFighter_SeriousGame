@@ -9,9 +9,8 @@ Goal of this module was to:
 - Connect these technologies to a working Web Application with database communication.
 
 
-The game itself, which is done entirely in JS using the Phaser Engine, aims to improve the players typing skills by letting them 
-type different texts while providing visual and acoustic feedback as well as a score and error rate. Around the game exist different webpages
-like a login page, a profile page, a friendslist and messaging system and of course a setup menu, containing the level selection and high scores.
+The game itself is done entirely in JS using the Phaser Engine and aims to improve the players typing skills by letting them 
+type different "levels" while providing visual and acoustic feedback as well as a score and error rate. Around the game we created an account system inlcuding a login page and a profile page, a friends system with a friendslist and messaging functionality and of course a setup menu, containing the level selection, level preview and high scores.
 
 ![Alt text](http://i.imgur.com/cGCW09V.png "Setup Menu")
 ![Alt text](http://imgur.com/A57BEW5.png "Messaging & Friends")
